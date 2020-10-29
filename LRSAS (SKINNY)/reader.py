@@ -432,7 +432,7 @@ def identify(fid_new):
         identification_done = True
         return {'ct': str(m1) + str(m2)}
     elif fid_new in tags['fid_old']:
-        current_tag = tags['fid_old'].index(fid_new)
+        current_tag = tags['fmid_old'].index(fid_new)
         m1 = fid_new^r
         p = SkinnyCipher(tags['key_old'][current_tag])
         m2 = p.encrypt(fid_new^tags['id'][current_tag]^r)
